@@ -1,0 +1,12 @@
+universe = vanilla
+
+output = ./logs/prepare.$(cluster).$(process).out 
+error = ./logs/prepare.$(cluster).$(process).err 
+log = ./logs/prepare.$(cluster).$(process).log
+
+requirements = (OpSys == "LINUX" && Arch == "X86_64")
+
+executable = prepare.sh
+
+arguments = "$(MYARGS)"
+queue

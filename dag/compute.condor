@@ -1,0 +1,12 @@
+universe = vanilla
+
+output = ./logs/compute.$(cluster).$(process).out 
+error = ./logs/compute.$(cluster).$(process).err 
+log = ./logs/compute.$(cluster).$(process).log
+
+requirements = (OpSys == "LINUX" && Arch == "X86_64")
+
+executable = compute.sh
+
+arguments = "$(MYARGS)"
+queue

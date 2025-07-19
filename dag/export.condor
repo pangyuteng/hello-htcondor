@@ -1,0 +1,12 @@
+universe = vanilla
+
+output = ./logs/export.$(cluster).$(process).out 
+error = ./logs/export.$(cluster).$(process).err 
+log = ./logs/export.$(cluster).$(process).log
+
+requirements = (OpSys == "LINUX" && Arch == "X86_64")
+
+executable = export.sh
+
+arguments = "$(MYARGS)"
+queue

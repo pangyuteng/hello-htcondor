@@ -1,0 +1,26 @@
+
+Job P0 prepare.condor
+VARS P0 MYARGS="parepare 00"
+Job P1 prepare.condor
+VARS P1 MYARGS="parepare 01"
+
+Job C0 compute.condor
+VARS C0 MYARGS="compute 00"
+Job C1 compute.condor
+VARS C1 MYARGS="compute 01"
+
+Job E0 export.condor
+VARS E0 MYARGS="export 00"
+
+PARENT P0 CHILD C0
+PARENT P1 CHILD C1
+PARENT C0 C1 CHILD E0
+
+CATEGORY P0 limited
+CATEGORY P1 limited
+CATEGORY C0 limited
+CATEGORY C1 limited
+CATEGORY E0 limited
+
+MAXJOBS limited 2
+
