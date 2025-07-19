@@ -17,6 +17,9 @@ request_gpus = 1
 request_memory = 10GB
 request_disk = 1000MB
 
+# 10G
++DevShmSize = 10737418240
+
 arguments = ""
 queue
 

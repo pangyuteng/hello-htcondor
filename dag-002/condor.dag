@@ -1,0 +1,13 @@
+
+Job A prepare.condor
+Job B compute.condor
+Job C export.condor
+
+PARENT A CHILD B
+PARENT B CHILD C
+
+CATEGORY A limited
+CATEGORY B limited
+CATEGORY C limited
+
+MAXJOBS limited 2

@@ -1,0 +1,13 @@
+universe = vanilla
+
+output = ./logs/prepare.$(cluster).$(process).out 
+error = ./logs/prepare.$(cluster).$(process).err 
+log = ./logs/prepare.$(cluster).$(process).log
+
+requirements = (OpSys == "LINUX" && Arch == "X86_64")
+
+executable = run.sh
+
+max_materialize = 2
+arguments = "prepare $(myargs)"
+queue myargs from many.args
