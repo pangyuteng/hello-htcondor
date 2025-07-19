@@ -1,0 +1,19 @@
+universe = vanilla
+
+output = ./logs/$(cluster).$(process).out 
+error = ./logs/$(cluster).$(process).err 
+log = ./logs/$(cluster).$(process).log
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+requirements = (OpSys == "LINUX" && Arch == "X86_64")
+request_gpus = 0
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1MB
+
+# transfer_executable = True
+executable = run.sh
+arguments = "hello world"
+queue
