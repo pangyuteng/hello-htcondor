@@ -7,7 +7,7 @@ VARS P1 MYARGS="parepare 01"
 Job C0 compute.condor
 VARS C0 MYARGS="compute 00"
 Job C1 compute.condor
-VARS C1 MYARGS="compute 01"
+VARS C1 MYARGS="compute raiseerror"
 
 Job E0 export.condor
 VARS E0 MYARGS="export 00"
