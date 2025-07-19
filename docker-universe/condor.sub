@@ -1,0 +1,22 @@
+universe = docker
+docker_image = pytorch/pytorch:2.7.1-cuda11.8-cudnn9-runtime
+
+#requirements = (Machine  == "hostname.ucla.edu")
+requirements = (GPUMEM >= 20000 && OpSys == "LINUX" && Arch == "X86_64")
+
+output = ./logs/job.$(cluster).$(process).out 
+error = ./logs/job.$(cluster).$(process).err 
+log = ./logs/job.$(cluster).$(process).log
+
+executable = run.sh
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+
+request_cpus = 1
+request_gpus = 1
+request_memory = 10GB
+request_disk = 1000MB
+
+arguments = ""
+queue
+
