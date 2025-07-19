@@ -6,7 +6,9 @@ log = ./logs/compute.$(cluster).$(process).log
 
 requirements = (OpSys == "LINUX" && Arch == "X86_64")
 
+#executable = compute-no-catch.sh
 executable = compute.sh
+
 transfer_input_files = foobar.py
 should_transfer_files = YES
 when_to_transfer_output = ON_EXIT
