@@ -14,7 +14,6 @@ request_memory = 1GB
 request_disk = 1MB
 
 transfer_input_files = README.md,my.args
-# transfer_executable = True
 executable = run.sh
 max_materialize = 2
 
